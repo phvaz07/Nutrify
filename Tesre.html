@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Regata Masculina Esportiva - Nutrify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    /* Estilos para tamanhos */
+    .tamanhos {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .tamanhos input[type="radio"] {
+      display: none;
+    }
+
+    .tamanhos label {
+      padding: 10px 20px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      user-select: none;
+    }
+
+    .tamanhos input[type="radio"]:checked + label {
+      background-color: #000;
+      color: white;
+      border-color: #000;
+    }
+
+    /* Estilos para cores */
+    .cores {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .cores input[type="radio"] {
+      display: none;
+    }
+
+    .cores label {
+      width: 40px;
+      height: 40px;
+      border: 2px solid #ccc;
+      cursor: pointer;
+      display: inline-block;
+      border-radius: 5px;
+      transition: border-color 0.3s, border-width 0.3s;
+      user-select: none;
+    }
+
+    .azul {
+      background-color: blue;
+    }
+
+    .vermelho {
+      background-color: red;
+    }
+
+    .preto {
+      background-color: black;
+    }
+
+    /* Azul e vermelho selecionados: borda preta mais grossa */
+    .cores input[type="radio"]:checked + label.azul,
+    .cores input[type="radio"]:checked + label.vermelho {
+      border-color: black;
+      border-width: 3px;
+    }
+
+    /* Preto selecionado: borda branca mais grossa */
+    .cores input[type="radio"]:checked + label.preto {
+      border-color: white;
+      border-width: 3px;
+    }
+  </style>
+</head>
+
+<body style="font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5;">
+
+  <h1>Regata Masculina Esportiva - Nutrify</h1>
+
+  <h2>Tamanho</h2>
+  <div class="tamanhos">
+    <input type="radio" id="tamanhoP" name="tamanho" value="P" />
+    <label for="tamanhoP">P</label>
+
+    <input type="radio" id="tamanhoM" name="tamanho" value="M" />
+    <label for="tamanhoM">M</label>
+
+    <input type="radio" id="tamanhoG" name="tamanho" value="G" />
+    <label for="tamanhoG">G</label>
+  </div>
+
+  <h2>Cor</h2>
+  <div class="cores">
+    <input type="radio" id="azul" name="cor" value="azul" />
+    <label for="azul" class="azul"></label>
+
+    <input type="radio" id="vermelho" name="cor" value="vermelho" />
+    <label for="vermelho" class="vermelho"></label>
+
+    <input type="radio" id="preto" name="cor" value="preto" />
+    <label for="preto" class="preto"></label>
+  </div>
+
+  <p><strong>Cores disponíveis:</strong> Preto, Cinza Mescla, Branco</p>
+
+  <!-- Exemplo de botão -->
+  <button style="padding: 10px 20px; font-size: 16px; cursor: pointer;">Adicionar ao Carrinho</button>
+
+</body>
+
+</html>
